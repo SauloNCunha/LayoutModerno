@@ -1,0 +1,18 @@
+program LayoutModerno;
+
+uses
+  Vcl.Forms,
+  uPrincipal in 'uPrincipal.pas' {frmPrincipal},
+  uSplash in 'uSplash.pas' {frmSplash},
+  uTelaBase in 'uTelaBase.pas' {frmTelaBase};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TfrmSplash, frmSplash);
+  Application.CreateForm(TfrmTelaBase, frmTelaBase);
+  Application.Run;
+end.

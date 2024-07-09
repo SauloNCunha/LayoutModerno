@@ -1,0 +1,40 @@
+unit uPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons;
+
+type
+  TfrmPrincipal = class(TForm)
+    procedure FormShow(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+uses
+  uSplash;
+
+{$R *.dfm}
+
+procedure TfrmPrincipal.FormShow(Sender: TObject);
+begin
+  Sleep(500);
+  frmSplash :=  tfrmSplash.Create(Self);
+  frmSplash.Show;
+  frmSplash.Refresh;
+  Sleep(5000);
+
+  if Assigned(frmSplash) then
+    FreeAndNil(frmSplash);
+end;
+
+end.

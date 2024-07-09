@@ -1,0 +1,41 @@
+object frmTelaBase: TfrmTelaBase
+  Left = 0
+  Top = 0
+  BorderStyle = bsNone
+  Caption = 'frmTelaBase'
+  ClientHeight = 338
+  ClientWidth = 651
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object pnlHeader: TPanel
+    Left = 0
+    Top = 0
+    Width = 651
+    Height = 41
+    Align = alTop
+    BevelOuter = bvNone
+    TabOrder = 0
+    ExplicitLeft = 232
+    ExplicitTop = 152
+    ExplicitWidth = 185
+    object pnlHeaderLineTop: TPanel
+      Left = 0
+      Top = 0
+      Width = 651
+      Height = 1
+      Align = alTop
+      BevelOuter = bvNone
+      Color = clBlack
+      ParentBackground = False
+      TabOrder = 0
+    end
+  end
+end

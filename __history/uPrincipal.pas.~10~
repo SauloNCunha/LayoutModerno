@@ -1,0 +1,56 @@
+unit uPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls,
+  Vcl.ComCtrls;
+
+type
+  TfrmPrincipal = class(TForm)
+    pnlPrincipalLeft: TPanel;
+    pnlPrincipalCenter: TPanel;
+    pnlPrincipalCenterLeft: TPanel;
+    pnlPrincipalCenterRigth: TPanel;
+    pnlPrincipalCenterTop: TPanel;
+    pnlPrincipalCenterButton: TPanel;
+    pgcPrincipal: TPageControl;
+    tbsMenu: TTabSheet;
+    btn1: TBitBtn;
+    procedure FormShow(Sender: TObject);
+    procedure btn1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+uses
+  uSplash, uFuncoes, uHerancaListagem;
+
+{$R *.dfm}
+
+procedure TfrmPrincipal.btn1Click(Sender: TObject);
+begin
+  CriarAba();
+end;
+
+procedure TfrmPrincipal.FormShow(Sender: TObject);
+begin
+  Sleep(500);
+  frmSplash :=  tfrmSplash.Create(Self);
+  frmSplash.Show;
+  frmSplash.Refresh;
+  Sleep(5000);
+
+  if Assigned(frmSplash) then
+    FreeAndNil(frmSplash);
+end;
+
+end.
